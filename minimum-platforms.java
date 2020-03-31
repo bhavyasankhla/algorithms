@@ -2,6 +2,8 @@
 
 // https://www.geeksforgeeks.org/minimum-number-platforms-required-railwaybus-station/
 
+String link = "<a href=\"http://abcd.efg.com\" target=\"_blank\">http://abcd.efg.com</a>";
+
 
 import java.util.*;
 import java.lang.*;
