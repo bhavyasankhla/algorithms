@@ -1,20 +1,20 @@
- 3Sum
-Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? 
-Find all unique triplets in the array which gives the sum of zero.
+//  3Sum
+// Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? 
+// Find all unique triplets in the array which gives the sum of zero.
 
-Note:
+// Note:
 
-The solution set must not contain duplicate triplets.
+// The solution set must not contain duplicate triplets.
 
-Example:
+// Example:
 
-Given array nums = [-1, 0, 1, 2, -1, -4],
+// Given array nums = [-1, 0, 1, 2, -1, -4],
 
-A solution set is:
-[
-  [-1, 0, 1],
-  [-1, -1, 2]
-]
+// A solution set is:
+// [
+//   [-1, 0, 1],
+//   [-1, -1, 2]
+// ]
 
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {             
@@ -37,16 +37,20 @@ class Solution {
                     while(left < right) {                        
                             int sum = (nums[left]+nums[right]);
                             if( sum == complement) {
+                                    
                                     list.add(Arrays.asList(nums[i], nums[left], nums[right]));
+                                    
                                     left++;
                                     right--;
-                                        while(nums[left] == nums[left-1] && left < right) {
-                                                left++;
-                                        }                            
-                            
-                                        while(nums[right] == nums[right+1] && right > left) {
-                                                right--;
-                                        }
+                                    
+                                    while(nums[left] == nums[left-1] && left < right) {
+                                            left++;
+                                    }                            
+
+                                    while(nums[right] == nums[right+1] && right > left) {
+                                            right--;
+                                    }
+                             
                             } else if(sum > complement) {
                                     right--;
                             } else {
