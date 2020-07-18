@@ -1,4 +1,4 @@
-// https://www.geeksforgeeks.org/minimum-number-platforms-required-railwaybus-station/
+/// https://www.geeksforgeeks.org/minimum-number-platforms-required-railwaybus-station/
 import java.util.*;
 import java.lang.*;
 import java.io.*;
