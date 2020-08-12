@@ -45,7 +45,6 @@ Note:
 
 **/
 
-
 class Solution {
     public boolean validMountainArray(int[] A) {
         
@@ -76,13 +75,10 @@ class Solution {
                              decreased = true;
                      }
  
-             if(A[i] == A[i-1])    {
+             if(A[i] >= A[i-1])    {
                      return false;
              }
                     
-                    if(A[i] > A[i-1])    {
-                     return false;
-             }
         }   
             
         return decreased && increased;
