@@ -33,6 +33,15 @@ class Codechef {
         if(node.data < min || node.data > max) {
             return false;
         }
+      
+       if(node.val == Integer.MIN_VALUE && node.left!=null) {
+            return false;    
+      }
+      
+      if(node.val == Integer.MAX_VALUE && node.right!=null) {
+              return false;
+      }
+                
         
         return (
             isBSTUtil(node.left, min, node.data-1) 
