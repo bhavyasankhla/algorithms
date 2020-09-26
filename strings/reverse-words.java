@@ -10,21 +10,27 @@ import java.io.*;
 class Codechef
 {
 	public static void main (String[] args) throws java.lang.Exception
-	{   
-	    
-      String s = "a.b.c.d";
-  		
-      String[] a = s.split("\\.");
-	  	int i;
-  		
-      for( i = a.length - 1; i > 0; i--) {
-	  	    System.out.print(a[i] + '.');
-		  }
-      
-  		System.out.print(a[i]);
+	{
+			
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		        int t = Integer.parseInt(br.readLine());
 		
-	  	permutations("abc", 0);
+			while(t-->0) {
+
+			    String s = String.valueOf(br.readLine());
+
+			    String[] words = s.split("\\.");
+
+			    for(int i = words.length-1; i>0; i--) {
+				System.out.print(words[i] + '.');
+			    }
+				
+			    System.out.println(words[0]);
+			}
 		
 	}
+	    
+      
 	
 }
