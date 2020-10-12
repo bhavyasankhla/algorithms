@@ -47,7 +47,8 @@ class Solution {
                                 
                                 while(j<l) {
                                         
-                                        if(nums[j] > nums[i-1] && nums[j]<nums[k]) {                                                                    k = j;        
+                                        if(nums[j] > nums[i-1] && nums[j]<nums[k]) {                                                                    
+                                          k = j;        
                                         }
                                         
                                         j++;
