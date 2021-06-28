@@ -21,10 +21,15 @@ class Solution {
                             
                             if(board[i][j] == word.charAt(0)) {
                         
-                                   char[][] copyOfBoard = new char[rows][cols];
-                                   for(int r = 0; r<rows; r++) {                                           
-                                           copyOfBoard[r] = Arrays.copyOf(board[r], cols);
-                                   }
+//                                    char[][] copyOfBoard = new char[rows][cols];
+//                                    for(int r = 0; r<rows; r++) {                                           
+//                                            copyOfBoard[r] = Arrays.copyOf(board[r], cols);
+//                                    }
+                                
+                                // We are already restoring the characters after check in findWord method so no need to make new copy of the 2D array
+                                // This check below 
+                                //                 char c = board[row][col];
+                                    //                board[row][col] = '*';  
                                    
                                    if(findWord(copyOfBoard,i,j,word,0) && !list.contains(word)) {
                                            list.add(word);
