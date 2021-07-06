@@ -70,6 +70,34 @@ class Solution {
             }
             
             return result;
+     
+     
+//            2nd approach
+     
+        
+            
+     
+     
+            ArrayList<Integer> list = new ArrayList<>();            
+            list.add(nums[0]);
+            
+            for(int i = 1; i < nums.length; i++) {
+                    int num = nums[i];
+                    if(num > list.get(list.size()-1)) {
+                            list.add(num);
+                    } else {
+                            // Find the first element in list that is greater than or equal to num
+                            int j = 0;
+                            while( list.get(j) < num) {
+                                    j++;
+                            }
+                            list.set(j, num);
+                    }
+                    
+            }
+            
+            return list.size();
+     
 
     }
 
